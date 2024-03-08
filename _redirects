@@ -1,13 +1,15 @@
 http://primeupyour.life  https://primeupyour.life
 http://www.primeupyour.life https://primeupyour.life
 https://www.primeupyour.life https://primeupyour.life
-
 /thelist		/THELIST
 /TheList		/THELIST
 /THELIST		https://docs.google.com/spreadsheets/d/e/2PACX-1vT4Iz8x0PKm6pgPXMv99WvOmxJfE1fKIbSID7stHWdgLAAe-KqOpzcZ61a0-lMM-AS6poBBexIfyBLi/pubhtml
 /cashapp		/CASHAPP
 /CashApp		/CASHAPP
 /CASHAPP		https://cash.app/$PrimeUpYourLife
+/stripe			/STRIPE
+/Stripe			/STRIPE
+/STRIPE			https://donate.stripe.com/fZeeWogqfc24aDS288
 /paypal			/PAYPAL
 /PayPal			/PAYPAL
 /PAYPAL			https://www.paypal.com/paypalme/bbbzoom
@@ -15,4 +17,5 @@ https://www.primeupyour.life https://primeupyour.life
 /Revolut		/REVOLUT
 /revolut		/REVOLUT
 /REVOLUT		https://revolut.me/primeupyourlife
+
 /*  /
