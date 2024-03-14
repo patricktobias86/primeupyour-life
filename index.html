@@ -1203,7 +1203,35 @@ p.style2 span.p:nth-child(n + 2) {
 small {
     font-size: smaller;
 }
+
+.button {
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 40px;
+}
+.cashapp {
+    background-image: url(assets/cashapp.svg);
+}
+.paypal {
+    background-image: url(assets/paypal.svg);
+}
+.interac {
+    background-image: url(assets/interac.png);
+}
+.revolut {
+    background-image: url(assets/revolut.svg);
+    background-size: 45px;
+}
+.copy svg {
+    width: 17px !important;
+    height: 17px !important;
+    display: inline-block !important;
+}
+span.copy {
+    text-align: left;
+}
 </style>
+
     </head>
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
@@ -1264,27 +1292,28 @@ small {
                     <h2 id="text04" class="style2">Donate</h2>
                     <ul id="buttons01" class="style1 buttons" style="opacity: 1; transform: none;">
                         <li>
-                            <a href="/CASHAPP" class="button n01">
-                                <svg><use xlink:href="#icon-7a95ce5a9889a60cc1df5b4282f766c2"></use></svg><span class="label"><small>Cash App</small><br>$PrimeUpYourLife</span>
+                            <a href="/CASHAPP" class="button cashapp">
+                                <span class="label"><small>Cash App</small><br>$PrimeUpYourLife</span>
                             </a>
                         </li>
                         <li class="hide">
-                            <a href="/STRIPE" class="button n01">
+                            <a href="/STRIPE" class="button stripe">
                                 <span class="label"><small>Stripe</small><br>GOOGLE/APPLE PAY</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/PAYPAL" class="button n01">
+                            <a href="/PAYPAL" class="button paypal">
                                 <span class="label"><small>PayPal</small><br>@bbbzoom</span>
                             </a>
                         </li>
+<input id="email" value="optimus@hausofprime.com" class="hide">
                         <li>
-                            <a class="button n02">
-                                <span class="label"><small>Interac (Canada)</small><br>optimus@hausofprime.com</span>
+                            <a data-clipboard-target="email" class="button interac">
+                                <span class="copy"><small>Interac (Canada)</small><br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg> optimus@hausofprime.com</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/REVOLUT" class="button n04">
+                            <a href="/REVOLUT" class="button revolut">
                                 <span class="label"><small>Revolut</small><br>@primeupyourlife</span>
                             </a>
                         </li>
@@ -2112,5 +2141,27 @@ small {
             })();
         </script>
         <div class="ai-modal-container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';"></div>
+<script src="assets/clipboard.min.js"></script>
+    <script>
+      var clipboard = new ClipboardJS('.button.interac', {
+        target: function () {
+          return document.querySelector('#email');
+        },
+      });
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
+
+
     </body>
 </html>
